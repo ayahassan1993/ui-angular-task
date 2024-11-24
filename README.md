@@ -95,6 +95,3 @@ Recreate the dashboard with the following sections:
 - Ensure you push your solution to this repository by the deadline.
 - If you have any questions, reach out to [Your Email Address].
 
----
-
-By providing this structured repository, developers can easily collaborate, complete the task, and submit their solutions. Let me know if you’d like further refinements!
