@@ -93,5 +93,5 @@ Recreate the dashboard with the following sections:
 
 ### Important Notes
 - Ensure you push your solution to this repository by the deadline.
-- If you have any questions, reach out to [Your Email Address].
+- If you have any questions, reach out to.
 
