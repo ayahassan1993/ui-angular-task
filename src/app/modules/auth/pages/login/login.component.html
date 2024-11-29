@@ -1,0 +1,70 @@
+<section
+  class="before:absolute before:bg-bgRed before:w-[40%] before:h-full before:-z-10 before:right-0 before:top-0"
+>
+  <div class="grid lg:grid-cols-2 gap-5 min-h-screen">
+    <div class="flex justify-center items-center pt-7 px-5">
+      <div
+        class="max-w-[598px] md:w-[598px] mx-auto px-11 py-14 rounded-xl shadow-md bg-[#fff]"
+      >
+        <h1 class="md:text-5xl sm:text-3xl text-xl font-bold">Exclusive</h1>
+        <p class="opacity-50 my-6">Welcome back !!!</p>
+        <h1 class="md:text-5xl sm:text-3xl text-xl font-bold">Sing in</h1>
+        <form class="mt-5" [formGroup]="loginForm">
+          <div class="mb-4">
+            <label for="email" class="block text-sm">Email address</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="mt-1 bg-lightRed focus-visible:outline-red block w-full sm:text-sm rounded-md px-3 py-4"
+              placeholder="Enter your email"
+              required
+            />
+            @if(loginForm.get('email')?.invalid &&
+            loginForm.get('email')?.touched){
+            <small class="text-red">Email is required</small>
+            }
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="password"
+              class="text-sm flex justify-between items-center"
+            >
+              <span>Password</span>
+              <a href="#" class="opacity-50">Forgot Password ?</a></label
+            >
+            <input
+              type="password"
+              id="password"
+              placeholder="*********"
+              formControlName="password"
+              required
+              class="mt-1 bg-lightRed focus-visible:outline-red block w-full sm:text-sm rounded-md px-3 py-4"
+            />
+            @if(loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched){
+            <small class="text-red">Password is required</small>
+            }
+          </div>
+          <div class="text-center mt-8">
+            <button
+              [disabled]="loginForm.invalid"
+              type="submit"
+              class="py-4 px-8 font-bold text-center disabled:opacity-55 bg-red text-[#fff] rounded-full inline-flex gap-2 items-center"
+            >
+              Sing in
+
+              <img src="assets/images/arrow-right.svg" alt="icon" />
+            </button>
+          </div>
+        </form>
+        <p class="text-center mt-7">
+          <span class="opacity-50">I don’t have an account ?</span>
+          <a href="#" class="text-red mx-2">Sign up</a>
+        </p>
+      </div>
+    </div>
+    <img class="w-full max-lg:hidden" src="assets/images/login-bg.png" alt="" />
+  </div>
+</section>
