@@ -1,0 +1,16 @@
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .category {
+    padding: 0.4rem 0.8rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+}

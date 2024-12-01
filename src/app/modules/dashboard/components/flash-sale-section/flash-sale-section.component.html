@@ -1,0 +1,64 @@
+<section class="py-8">
+  <div class="lg:container mx-auto px-4">
+    <p class="title_style">Today’s</p>
+    <div class="sm:grid grid-cols-5">
+      <h1
+        class="lg:text-3xl text-2xl mt-6 lg:col-span-1 col-span-2 font-semibold"
+      >
+        Flash Sales
+      </h1>
+      <div
+        class="space-x-3 flex items-center lg:col-span-3 col-span-2 max-md:col-span-3 max-md:justify-end max-sm:justify-start text-center"
+      >
+        <div>
+          <small> Days </small>
+          <h3 class="sm:text-3xl font-bold">{{ countdown?.days }}</h3>
+        </div>
+        <span class="mt-5 inline-block">:</span>
+        <div>
+          <small> Hours </small>
+          <h3 class="sm:text-3xl font-bold">{{ countdown?.hours }}</h3>
+        </div>
+        <span class="mt-5 inline-block">:</span>
+        <div>
+          <small> Minutes </small>
+          <h3 class="sm:text-3xl font-bold">{{ countdown?.minutes }}</h3>
+        </div>
+        <span class="mt-5 inline-block">:</span>
+        <div>
+          <small> Seconds </small>
+          <h3 class="sm:text-3xl font-bold">{{ countdown?.seconds }}</h3>
+        </div>
+      </div>
+      <div
+        class="col-span-1 flex gap-2 max-md:col-span-5 justify-end max-md:mt-4"
+      >
+        <div class="swiper-button-prev cursor-pointer">
+          <img src="assets/images/prev.svg" alt="" />
+        </div>
+        <div class="swiper-button-next cursor-pointer">
+          <img src="assets/images/next.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="swiper flash-sale-swiper my-6">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        @for (product of filterdProducts(); track $index) {
+        <div class="swiper-slide">
+          <product-card [product]="product"></product-card>
+        </div>
+        }
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    @if(!filterdProducts()?.length){
+    <p class="text-center py-4">No Data Found</p>
+    }
+    <div class="text-center">
+      <a class="btn-style" href="#">View All Products</a>
+    </div>
+  </div>
+</section>

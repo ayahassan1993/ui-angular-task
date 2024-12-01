@@ -1,3 +1,60 @@
-body{
-    font-family: "Inter";
+body {
+  font-family: "Inter";
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1170px !important;
+  }
+}
+
+.title_style {
+  color: #db4444;
+  position: relative;
+  padding: 8px 0 8px 2rem;
+  &:before {
+    content: "";
+    height: 40px;
+    width: 20px;
+    background: #db4444;
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    top: 0;
+  }
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  left: 0;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  .swiper-pagination-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    &.swiper-pagination-bullet-active {
+      background: #db4444;
+      border: 1px solid #fff;
+      opacity: 1;
+    }
+  }
+}
+.btn-style {
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+  background: #db4444;
+  color: #fff;
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  border: 1px solid #db4444;
+  &:hover {
+    background-color: #fff;
+    color: #db4444;
+  }
 }

@@ -1,0 +1,73 @@
+<section class="pb-8">
+  <div class="lg:container mx-auto px-4">
+    <div class="lg:grid grid-cols-5 gap-5">
+      <div class="col-span-1 pr-5 pt-8 lg:border-r lg:border-borderColor">
+        <ul class="flex lg:flex-col gap-4 overflow-x-auto">
+          <li class="category" (click)="categoryEmitter.emit('women')">
+            <span>Woman’s Fashion</span>
+            <img src="assets/images/arrow.svg" alt="arrow" />
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('men')">
+            <span>Men’s Fashion</span>
+            <img src="assets/images/arrow.svg" alt="arrow" />
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('home')">
+            <span>Home & Lifestyle</span>
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('medical')">
+            <span>Medicine</span>
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('sports')">
+            <span>Sports & Outdoor</span>
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('baby')">
+            <span>Baby’s & Toys</span>
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('pets')">
+            <span>Groceries & Pets</span>
+          </li>
+          <li class="category" (click)="categoryEmitter.emit('health')">
+            <span>Health & Beauty</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-4 lg:pl-5 pt-8">
+        <!-- Slider main container -->
+        <div class="swiper hero-swiper relative">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            @for (item of [1,2,3]; track $index) {
+            <div
+              class="swiper-slide lg:grid grid-cols-2 gap-5 bg-[#000] pt-5 pb-8 text-[#fff] px-14"
+            >
+              <div class="flex flex-col justify-center max-lg:text-center">
+                <img
+                  src="assets/images/apple.png"
+                  class="w-48 max-lg:mx-auto"
+                  alt=""
+                />
+                <h1 class="lg:text-6xl text-3xl my-8">Up to 10% off Voucher</h1>
+                <a
+                  href="#"
+                  class="inline-flex gap-2 items-center max-lg:justify-center"
+                >
+                  <span class="border-b border-[#fff] pb-1">Shop Now </span>
+                  <img src="assets/images/long-arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <img
+                class="max-lg:mt-4 mx-auto"
+                src="assets/images/hero-mobile.png"
+                alt=""
+              />
+            </div>
+            }
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

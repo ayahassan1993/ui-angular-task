@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
 export const routes: Routes = [
   {
@@ -7,5 +7,10 @@ export const routes: Routes = [
       import("./modules/auth/pages/login/login.component").then(
         (mod) => mod.LoginComponent
       ),
+  },
+  {
+    path: "",
+    loadChildren: () =>
+      import("./core/layout/layout-routes").then((mod) => mod.routes),
   },
 ];

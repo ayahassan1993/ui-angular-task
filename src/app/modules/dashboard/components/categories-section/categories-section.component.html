@@ -1,0 +1,37 @@
+<section class="py-8">
+  <div class="lg:container mx-auto border-y border-borderColor py-16 px-4">
+    <p class="title_style">Categories</p>
+    <div class="flex justify-between items-center">
+      <h1 class="lg:text-3xl text-2xl my-6 col-span-1 font-semibold">
+        Browse By Category
+      </h1>
+      <div class="col-span-1 flex gap-2 justify-end">
+        <div class="categories-swiper-button-prev cursor-pointer">
+          <img src="assets/images/prev.svg" alt="" />
+        </div>
+        <div class="categories-swiper-button-next cursor-pointer">
+          <img src="assets/images/next.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="swiper categories-sale-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        @for (category of categories; track $index) {
+        <div class="swiper-slide">
+          <div
+            class="border border-borderColor rounded-md py-8 px-5 text-center"
+          >
+            <img
+              src="assets/images/{{ category.image }}.svg"
+              class="object-cover m-auto mb-5"
+            />
+            <p>{{ category?.name }}</p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<section class="py-8">
+  <div class="lg:container mx-auto">
+    <div class="grid md:grid-cols-2 gap-5 bg-[#000] text-[#fff] md:px-14 px-8">
+      <div class="flex flex-col justify-center py-5">
+        <p class="text-green">Categories</p>
+        <h1 class="lg:text-6xl text-3xl my-8">Enhance Your Music Experience</h1>
+        <div class="space-x-3 flex items-center col-span-3 my-8">
+          <div class="countDounStyle">
+            <h3 class="font-bold">{{ countdown?.days }}</h3>
+            <small> Days </small>
+          </div>
+
+          <div class="countDounStyle">
+            <h3 class="font-bold">{{ countdown?.hours }}</h3>
+            <small> Hours </small>
+          </div>
+
+          <div class="countDounStyle">
+            <h3 class="font-bold">{{ countdown?.minutes }}</h3>
+            <small> Minutes </small>
+          </div>
+
+          <div class="countDounStyle">
+            <h3 class="font-bold">{{ countdown?.seconds }}</h3>
+            <small> Seconds </small>
+          </div>
+        </div>
+        <a href="#" class="inline-flex gap-2 items-center">
+          <span class="btn-style bg-green">Buy Now!</span>
+        </a>
+      </div>
+      <div class="relative text-center py-5">
+        <img
+          class="absolute top-0 left-0 w-full h-full max-md:rounded-full"
+          src="assets/images/speaker-bg.png"
+          alt=""
+        />
+        <img class="relative mx-auto" src="assets/images/speaker2.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>

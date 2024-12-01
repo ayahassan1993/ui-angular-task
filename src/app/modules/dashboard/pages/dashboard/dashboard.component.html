@@ -1,0 +1,37 @@
+<!-- ========== hero section =========== -->
+<hero-section (categoryEmitter)="category.set($event)"></hero-section>
+<!-- ========== flash sale section =========== -->
+<flash-sale-section [category]="category()"></flash-sale-section>
+<!-- ========== categories section =========== -->
+<categories-section></categories-section>
+<!-- ========== best seller section =========== -->
+<best-sellers-section [category]="category()"></best-sellers-section>
+<!-- ========== offers section =========== -->
+<offers-section [category]="category()"></offers-section>
+<!-- ========== products section =========== -->
+<products-section [category]="category()"></products-section>
+<!-- ========== new arraival section =========== -->
+<new-arraivals-section></new-arraivals-section>
+<section class="py-8">
+  <div class="max-w-screen-lg mx-auto px-4">
+    <div class="sm:grid grid-cols-3 gap-4">
+      <div class="text-center">
+        <img src="assets/images/shipping.png" class="mx-auto" alt="" />
+        <h3 class="md:text-lg font-bold mt-4 text-sm">
+          FREE AND FAST DELIVERY
+        </h3>
+        <p class="max-md:text-xs">Free delivery for all orders over $140</p>
+      </div>
+      <div class="text-center">
+        <img src="assets/images/support.png" class="mx-auto" alt="" />
+        <h3 class="md:text-lg font-bold mt-4 text-sm">24/7 CUSTOMER SERVICE</h3>
+        <p class="max-md:text-xs">Friendly 24/7 customer support</p>
+      </div>
+      <div class="text-center">
+        <img src="assets/images/safty.png" class="mx-auto" alt="" />
+        <h3 class="md:text-lg font-bold mt-4 text-sm">MONEY BACK GUARANTEE</h3>
+        <p class="max-md:text-xs">We reurn money within 30 days</p>
+      </div>
+    </div>
+  </div>
+</section>
