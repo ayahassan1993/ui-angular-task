@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -19,4 +20,14 @@ export class LoginComponent {
     email: new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required]),
   });
+
+  constructor(private router: Router) {}
+
+  onSubmit() {
+    localStorage.setItem(
+      "userData",
+      JSON.stringify(this.loginForm.getRawValue())
+    );
+    this.router.navigate(["/"]);
+  }
 }

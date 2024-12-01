@@ -13,4 +13,6 @@ export class HeaderComponent {
   showMenu: WritableSignal<boolean> = signal(false);
   showMenuProfile: WritableSignal<boolean> = signal(false);
   showMobileMenu: WritableSignal<boolean> = signal(false);
+
+  userData = localStorage.getItem("userData") || null;
 }

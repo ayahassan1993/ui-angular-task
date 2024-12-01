@@ -22,7 +22,11 @@
             />
             @if(loginForm.get('email')?.invalid &&
             loginForm.get('email')?.touched){
-            <small class="text-red">Email is required</small>
+            <small class="text-red">{{
+              loginForm.get("email")?.hasError("required")
+                ? "Email is required"
+                : "please enter a valid email"
+            }}</small>
             }
           </div>
 
@@ -50,6 +54,7 @@
           <div class="text-center mt-8">
             <button
               [disabled]="loginForm.invalid"
+              (click)="onSubmit()"
               type="submit"
               class="py-4 px-8 font-bold text-center disabled:opacity-55 bg-red text-[#fff] rounded-full inline-flex gap-2 items-center"
             >

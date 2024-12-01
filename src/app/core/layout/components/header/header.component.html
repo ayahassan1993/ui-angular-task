@@ -64,7 +64,7 @@
       <a routerLink="/" class="hover:text-gray-900 underline">Home</a>
       <a routerLink="/" class="hover:text-gray-900">About Us</a>
       <a routerLink="/" class="hover:text-gray-900">Contact Us</a>
-      <a routerLink="/" class="hover:text-gray-900">Sign up</a>
+      <a routerLink="/login" class="hover:text-gray-900">Sign up</a>
     </nav>
 
     <!-- Hamburger Menu (Visible on smaller screens) -->
@@ -123,9 +123,11 @@
             (click)="showMenuProfile.set(!showMenuProfile())"
           >
             <!-- User Icon -->
+            @if(userData){
             <a href="#" class="text-gray-600 hover:text-gray-800">
               <img src="assets/images/user.svg" alt="" />
             </a>
+            }
           </button>
         </div>
         @if(showMenuProfile()){
